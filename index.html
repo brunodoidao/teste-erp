@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste ERP</title>
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tudo">
+        <div id="cabecalho">
+            <div class="subcabec">
+                <button id="fechar">Fechar OS</button>
+                <div class="infocabec">
+                    Número:
+                    <input type="text" id="num-cab" value="">
+                </div>
+                <div class="infocabec">
+                    Cliente:
+                    <input type="text" id="cliente-cod"><button id="btn-psq">🔍</button><input type="text" id="nome-cliente"></input>
+                </div>
+                <div id="datacabec">
+                    Data:   
+                    <input type="date" id="datacabec">
+                </div>
+                <div id="cabecdesc">
+                    Descrição: <br>
+                    <textarea name="desc" id="princ-desc" cols="" rows="5"></textarea>
+                </div>
+                <div id="modal-cliente" class="modal">
+                    
+                    <div class="modal-content">
+                        <span class="close" onclick="fechar()">&times;</span>
+                        <div class="modal-title">
+                            <h1>Selecione abaixo o cliente que deseja inserir na OS</h1>
+                        </div>
+                        <div class="opt-cliente">
+                           <input type="text" value="001" disabled><input type="text" value="João da Silva e Sauro" disabled><button class="select-client" id="client1" onclick="cliente1()">OK</button></input>
+                        </div>
+                        <div class="opt-cliente">
+                           <input type="text" value="002" disabled><input type="text" value="Paulo Freire" disabled><button class="select-client" id="client2" onclick="cliente2()">OK</button></input>
+                        </div>
+                        <div class="opt-cliente">
+                           <input type="text" value="003" disabled><input type="text" value="Marcos Mion" disabled><button class="select-client" id="client3" onclick="cliente3()">OK</button></input>
+                        </div>
+                        <div class="opt-cliente">
+                           <input type="text" value="004" disabled><input type="text" value="Rodrigo Faro" disabled><button class="select-client" id="client4" onclick="cliente4()">OK</button></input>
+                        </div>
+                        <div class="opt-cliente">
+                           <input type="text" value="005" disabled><input type="text" value="Silvio Martinelli" disabled><button class="select-client" id="client5" onclick="cliente5()">OK</button></input>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        <div id="rodape">
+            <div id="title">Itens da OS</div>
+            <div class="sup-rod">
+                <div class="nav">
+                    <button class="btn-nav" id="ant-nav" onclick="diminuinav()">←</button>
+                    <button class="btn-nav" id="dep-nav" onclick="aumentanav()">→</button>
+                    <input id="atual-page" type="number" value="1" disabled>de
+                    <input id="qtd-page" type="number" value="10" disabled>
+                </div>
+                <div class="func">
+                    <button class="btn-func">SALVAR</button>
+                    <button class="btn-func">ENCAMINHAR</button>
+                    <button class="btn-func">NOVO ITEM</button>
+                    <button class="btn-func">ANEXOS</button>
+                </div>
+                <div class="info-os">
+                    <div id="info-user">
+                        Usuário: <input type="text" id="cod-user"><button id="search-user">🔍</button><input id="user" type="text" value=""></input>
+                    </div>
+                    <div id="data-item">
+                        Data: <input type="date">
+                    </div>
+                    <div id="subdesc">
+                        <textarea name="desc" id="desc-item" cols="" rows="5"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
